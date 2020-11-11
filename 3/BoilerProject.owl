@@ -1,0 +1,2461 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#"
+     xml:base="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:untitled-ontology-28="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isIn"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasOn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isOn"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#HotWaterBoiler"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Season"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasOn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasTemperature"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#HotWaterBoiler"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Season"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isOn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasTemperature"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasReceived -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasReceived">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isReceived"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#AppAlert"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isIn">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isOn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#HotWaterBoiler"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Season"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isOn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasTemperature"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#HotWaterBoiler"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Season"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasOn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasTemperature"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isReceived -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isReceived">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#AppAlert"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isSend -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isSend">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isSent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#AppSignal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isSent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isSent">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#AppSignal"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasTemperature -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasTemperature">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#AppSignal"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#HotWaterBoiler"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Season"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isComingHomeIn -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isComingHomeIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isTime">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isTooExpensive -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isTooExpensive">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#HotWaterBoiler"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#APP -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#APP"/>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#AppAlert -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#AppAlert">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#APP"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#AppSignal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#AppSignal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#APP"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasTemperature"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Bathroom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Bathroom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#HotWaterBoiler"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Season"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Toilet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isOn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasTemperature"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Bed -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Bed">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Bedroom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Bedroom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#HotWaterBoiler"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Season"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Bed"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isOn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasTemperature"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#ColdSeason -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#ColdSeason">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Season"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#HotWaterBoiler"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Season"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasTemperature"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#WarmSeason"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Day -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Day">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isTime"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Desk -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Desk">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#FirstFloor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#FirstFloor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#HotWaterBoiler"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Season"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasOn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasTemperature"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#GroundFloor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#HotWaterBoiler"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Season"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasOn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasTemperature"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#GroundFloor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#GroundFloor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#HotWaterBoiler"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Season"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasOn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasTemperature"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#HotWaterBoiler -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#HotWaterBoiler">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isTooExpensive"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasTemperature"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Kitchen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Kitchen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#HotWaterBoiler"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Season"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Oven"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isOn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasTemperature"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#LivingRoom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#LivingRoom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#HotWaterBoiler"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Season"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Sofa"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isOn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasTemperature"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Oven -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Oven">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Person">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#HotWaterBoiler"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Season"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isOn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasTemperature"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Season -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Season">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#HotWaterBoiler"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Season"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasTemperature"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Sofa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Sofa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#LivingRoom"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#StudyRoom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#StudyRoom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#HotWaterBoiler"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Season"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Desk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isOn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasTemperature"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Toilet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Toilet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#WarmSeason -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#WarmSeason">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Season"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#HotWaterBoiler"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Season"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasTemperature"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#AppAlert1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#AppAlert1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#AppAlert"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#AppSignal1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#AppSignal1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#AppSignal"/>
+        <hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">24</hasTemperature>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Bathroom1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Bathroom1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Bathroom"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Toilet"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isOn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+            </owl:Restriction>
+        </rdf:type>
+        <hasIn rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Boiler1"/>
+        <hasIn rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Toilet1"/>
+        <isOn rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#GroundFloor1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Bathroom2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Bathroom2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Bathroom"/>
+        <isOn rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#FirstFloor1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Bathroom3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Bathroom3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Bathroom"/>
+        <isOn rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#FirstFloor1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Boiler1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Boiler1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#HotWaterBoiler"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasTemperature"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdf:type>
+        <isIn rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Bathroom1"/>
+        <isTooExpensive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">7</isTooExpensive>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#ColdSeason1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#ColdSeason1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#ColdSeason"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Season"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasTemperature"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdf:type>
+        <hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</hasTemperature>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Dad -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Dad">
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Desk1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Desk1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Desk"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+            </owl:Restriction>
+        </rdf:type>
+        <isIn rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#StudyRoom1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Emma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Emma">
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Person"/>
+        <isIn rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#EmmasBedroom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#EmmasBed -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#EmmasBed">
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Bed"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+            </owl:Restriction>
+        </rdf:type>
+        <isIn rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#EmmasBedroom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#EmmasBedroom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#EmmasBedroom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Bedroom"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Bed"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isOn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+            </owl:Restriction>
+        </rdf:type>
+        <hasIn rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#EmmasBed"/>
+        <isOn rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#FirstFloor1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#FirstFloor1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#FirstFloor1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#FirstFloor"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasOn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+            </owl:Restriction>
+        </rdf:type>
+        <hasOn rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#EmmasBedroom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#GroundFloor1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#GroundFloor1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#GroundFloor"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasOn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Irene -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Irene">
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#IrenesBed -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#IrenesBed">
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Bed"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+            </owl:Restriction>
+        </rdf:type>
+        <isIn rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#IrenesBedroom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#IrenesBedroom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#IrenesBedroom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Bedroom"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Bed"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isOn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+            </owl:Restriction>
+        </rdf:type>
+        <hasIn rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#IrenesBed"/>
+        <isOn rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#FirstFloor1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Kitchen1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Kitchen1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Kitchen"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Oven"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isOn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+            </owl:Restriction>
+        </rdf:type>
+        <hasIn rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Oven1"/>
+        <isOn rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#GroundFloor1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#LivingRoom1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#LivingRoom1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#LivingRoom"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Sofa"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isOn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+            </owl:Restriction>
+        </rdf:type>
+        <hasIn rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Sofa1"/>
+        <isOn rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#GroundFloor1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Mum -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Mum">
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Niccolo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Niccolo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Person"/>
+        <isIn rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Kitchen1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#NiccolosBed -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#NiccolosBed">
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Bed"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+            </owl:Restriction>
+        </rdf:type>
+        <isIn rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#NiccolosBedroom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#NiccolosBedroom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#NiccolosBedroom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Bedroom"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Bed"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isOn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+            </owl:Restriction>
+        </rdf:type>
+        <hasIn rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#NiccolosBed"/>
+        <isOn rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#FirstFloor1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Oven1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Oven1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Oven"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+            </owl:Restriction>
+        </rdf:type>
+        <isIn rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Kitchen1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#ParentsBed -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#ParentsBed">
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Bed"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+            </owl:Restriction>
+        </rdf:type>
+        <isIn rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#ParentsBedroom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#ParentsBedroom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#ParentsBedroom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Bedroom"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Bed"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isOn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+            </owl:Restriction>
+        </rdf:type>
+        <hasIn rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#ParentsBed"/>
+        <isOn rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#FirstFloor1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Sofa1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Sofa1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#LivingRoom"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+            </owl:Restriction>
+        </rdf:type>
+        <isIn rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#LivingRoom1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#StudyRoom1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#StudyRoom1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#StudyRoom"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Desk"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isOn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+            </owl:Restriction>
+        </rdf:type>
+        <hasIn rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Desk1"/>
+        <isOn rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#GroundFloor1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Today -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Today">
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Day"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isTime"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdf:type>
+        <isTime rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13</isTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Toilet1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Toilet1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Toilet"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+            </owl:Restriction>
+        </rdf:type>
+        <isIn rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Bathroom1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Toilet2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Toilet2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Toilet"/>
+        <isIn rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Bathroom2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Toilet3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Toilet3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Toilet"/>
+        <isIn rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Bathroom3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn"/>
+        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Bed"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn"/>
+        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Desk"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn"/>
+        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Oven"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn"/>
+        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Sofa"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn"/>
+        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Toilet"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isIn"/>
+        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#LivingRoom"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Restriction>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#APP"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Day"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Person"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Season"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#AppAlert"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#AppSignal"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Day"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Person"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Season"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#AppAlert"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Day"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Person"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Season"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Bathroom"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Bedroom"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Kitchen"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#LivingRoom"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#StudyRoom"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Bed"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Desk"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#HotWaterBoiler"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Oven"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Sofa"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Toilet"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Bed"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Desk"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Oven"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Sofa"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Toilet"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Day"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Season"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Floor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Object"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Season"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#b">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#s">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#app">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#x">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#p">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#n">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#t">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#time">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#r">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#ff">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#r1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#gf">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#today">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#temp">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ReceiveAppAlarm</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#HotWaterBoiler"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#b"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isTooExpensive"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#b"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#s"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#AppAlert"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#app"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Person"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#x"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isReceived"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#app"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SignalFromApp</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Person"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isSend"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#p"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#n"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#AppSignal"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#n"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#HotWaterBoiler"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#b"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasTemperature"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#n"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#t"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasTemperature"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#b"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SetBoilerTemperatureGF</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                        <swrl:arguments>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#time"/>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </swrl:arguments>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isOn"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#r"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#ff"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#time"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isOn"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#r1"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#gf"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#GroundFloor"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#gf"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#r1"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isIn"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#x"/>
+                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#r"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#ColdSeason"/>
+                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#s"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                <rdf:first>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Person"/>
+                                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#x"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                        <rdf:first>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+                                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#r"/>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:first>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                <rdf:first>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Day"/>
+                                                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#today"/>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:first>
+                                                                                                <rdf:rest>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                        <rdf:first>
+                                                                                                            <rdf:Description>
+                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#HotWaterBoiler"/>
+                                                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#b"/>
+                                                                                                            </rdf:Description>
+                                                                                                        </rdf:first>
+                                                                                                        <rdf:rest>
+                                                                                                            <rdf:Description>
+                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                                <rdf:first>
+                                                                                                                    <rdf:Description>
+                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                                                                                                        <swrl:arguments>
+                                                                                                                            <rdf:Description>
+                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                <rdf:first rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#t"/>
+                                                                                                                                <rdf:rest>
+                                                                                                                                    <rdf:Description>
+                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</rdf:first>
+                                                                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                                                                    </rdf:Description>
+                                                                                                                                </rdf:rest>
+                                                                                                                            </rdf:Description>
+                                                                                                                        </swrl:arguments>
+                                                                                                                    </rdf:Description>
+                                                                                                                </rdf:first>
+                                                                                                                <rdf:rest>
+                                                                                                                    <rdf:Description>
+                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                                        <rdf:first>
+                                                                                                                            <rdf:Description>
+                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasTemperature"/>
+                                                                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#s"/>
+                                                                                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#t"/>
+                                                                                                                            </rdf:Description>
+                                                                                                                        </rdf:first>
+                                                                                                                        <rdf:rest>
+                                                                                                                            <rdf:Description>
+                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                                                <rdf:first>
+                                                                                                                                    <rdf:Description>
+                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isTime"/>
+                                                                                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#today"/>
+                                                                                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#time"/>
+                                                                                                                                    </rdf:Description>
+                                                                                                                                </rdf:first>
+                                                                                                                                <rdf:rest>
+                                                                                                                                    <rdf:Description>
+                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                                                        <rdf:first>
+                                                                                                                                            <rdf:Description>
+                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                                                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#FirstFloor"/>
+                                                                                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#ff"/>
+                                                                                                                                            </rdf:Description>
+                                                                                                                                        </rdf:first>
+                                                                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                                                                    </rdf:Description>
+                                                                                                                                </rdf:rest>
+                                                                                                                            </rdf:Description>
+                                                                                                                        </rdf:rest>
+                                                                                                                    </rdf:Description>
+                                                                                                                </rdf:rest>
+                                                                                                            </rdf:Description>
+                                                                                                        </rdf:rest>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:rest>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasTemperature"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#b"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasTemperature"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#r"/>
+                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</swrl:argument2>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SetBoilerTemperatureFF</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isOn"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#r"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#ff"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isOn"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#r1"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#gf"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#GroundFloor"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#gf"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#r1"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#ColdSeason"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#s"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Person"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#x"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isIn"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#x"/>
+                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#r1"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Room"/>
+                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#r"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                <rdf:first>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Day"/>
+                                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#today"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                        <rdf:first>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#HotWaterBoiler"/>
+                                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#b"/>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:first>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                <rdf:first>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                                                                                        <swrl:arguments>
+                                                                                                            <rdf:Description>
+                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                <rdf:first rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#t"/>
+                                                                                                                <rdf:rest>
+                                                                                                                    <rdf:Description>
+                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</rdf:first>
+                                                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                                                    </rdf:Description>
+                                                                                                                </rdf:rest>
+                                                                                                            </rdf:Description>
+                                                                                                        </swrl:arguments>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:first>
+                                                                                                <rdf:rest>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                        <rdf:first>
+                                                                                                            <rdf:Description>
+                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                                                                                                <swrl:arguments>
+                                                                                                                    <rdf:Description>
+                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                        <rdf:first rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#time"/>
+                                                                                                                        <rdf:rest>
+                                                                                                                            <rdf:Description>
+                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</rdf:first>
+                                                                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                                                            </rdf:Description>
+                                                                                                                        </rdf:rest>
+                                                                                                                    </rdf:Description>
+                                                                                                                </swrl:arguments>
+                                                                                                            </rdf:Description>
+                                                                                                        </rdf:first>
+                                                                                                        <rdf:rest>
+                                                                                                            <rdf:Description>
+                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                                <rdf:first>
+                                                                                                                    <rdf:Description>
+                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasTemperature"/>
+                                                                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#s"/>
+                                                                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#temp"/>
+                                                                                                                    </rdf:Description>
+                                                                                                                </rdf:first>
+                                                                                                                <rdf:rest>
+                                                                                                                    <rdf:Description>
+                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                                        <rdf:first>
+                                                                                                                            <rdf:Description>
+                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isTime"/>
+                                                                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#today"/>
+                                                                                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#time"/>
+                                                                                                                            </rdf:Description>
+                                                                                                                        </rdf:first>
+                                                                                                                        <rdf:rest>
+                                                                                                                            <rdf:Description>
+                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                                                <rdf:first>
+                                                                                                                                    <rdf:Description>
+                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                                                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#FirstFloor"/>
+                                                                                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#ff"/>
+                                                                                                                                    </rdf:Description>
+                                                                                                                                </rdf:first>
+                                                                                                                                <rdf:rest>
+                                                                                                                                    <rdf:Description>
+                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                                                        <rdf:first>
+                                                                                                                                            <rdf:Description>
+                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                                                                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                                                                                                                                <swrl:arguments>
+                                                                                                                                                    <rdf:Description>
+                                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                        <rdf:first rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#time"/>
+                                                                                                                                                        <rdf:rest>
+                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</rdf:first>
+                                                                                                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                                                                                            </rdf:Description>
+                                                                                                                                                        </rdf:rest>
+                                                                                                                                                    </rdf:Description>
+                                                                                                                                                </swrl:arguments>
+                                                                                                                                            </rdf:Description>
+                                                                                                                                        </rdf:first>
+                                                                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                                                                    </rdf:Description>
+                                                                                                                                </rdf:rest>
+                                                                                                                            </rdf:Description>
+                                                                                                                        </rdf:rest>
+                                                                                                                    </rdf:Description>
+                                                                                                                </rdf:rest>
+                                                                                                            </rdf:Description>
+                                                                                                        </rdf:rest>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:rest>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasTemperature"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#b"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasTemperature"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#r"/>
+                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</swrl:argument2>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SetBoilerTempComingHome</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#Person"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#isComingHomeIn"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#x"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#t"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.3</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#HotWaterBoiler"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#b"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#hasTemperature"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/chiar/ontologies/2020/10/untitled-ontology-28#b"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
